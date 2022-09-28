@@ -33,15 +33,19 @@ html {
 }
 
 body {
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    color: var(--text-main);
+    background: var(--background-main);
     line-height: 1.4;
+    word-wrap: break-word;
     max-width: 800px;
     margin: 20px auto;
     padding: 0 10px;
-    word-wrap: break-word;
-    color: var(--text-main);
-    background: var(--background-main);
+    
+    /* text styling */
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
