@@ -40,7 +40,7 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 10px;
-    
+
     /* text styling */
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     text-rendering: optimizeLegibility;
@@ -112,6 +112,10 @@ var {
   font-family: monospace;
 }
 
+section {
+  padding: 20px 0px 10px;
+}
+
 img,
 video {
   max-width: 100%;
@@ -137,9 +141,9 @@ a > strong {
 }
 
 /* code / blocks */
-code,
+time,
 samp,
-time {
+code {
   background: var(--background-block);
   color: var(--code-text);
   padding: 2.5px 5px;
@@ -147,7 +151,7 @@ time {
   font-size: 1em;
 }
 pre > code {
-  padding: 0px;
+  padding: 5px;
   display: block;
   overflow-x: auto;
 }
