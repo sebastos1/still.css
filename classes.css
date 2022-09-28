@@ -1,0 +1,5 @@
+@import url("still.css");
+
+.big-table {
+	background-color: var(--background-block);
+}

@@ -19,6 +19,7 @@
     --border: #6b6b6b;    
     --button-background: #161616;
     --button-hover: #0a0a0a;
+    --checkbox-fill: var(--text-main);
     --scrollbar-thumb: var(--button-background);
     --scrollbar-thumb-hover: var(--button-hover);
 
@@ -42,7 +43,8 @@ body {
     padding: 0 10px;
 
     /* text styling */
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    /* font-family: "Courier New", monospace; */
+    font-family: "Jetbrains Mono", monospace;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -149,7 +151,7 @@ code {
   padding: 2.5px 5px;
   border-radius: 6px;
   font-size: 1em;
-}
+}a
 pre > code {
   padding: 5px;
   display: block;
@@ -470,6 +472,39 @@ textarea:not([rows]) {
   min-height: 40px;
   height: 140px;
 }
+
+/* clean checkbox */
+input[type="checkbox"] {
+  background-color: var(--background-block);
+  color: var(--background-table);
+
+  appearance: none;
+  margin: 10px;
+  display: grid;
+  place-content: center;
+  width: 1em;
+  height: 1em;
+  border: 0.15em solid var(--background-block);
+  border-radius: 0.5em; 
+}
+
+
+input[type="checkbox"]::before {
+content: "";
+width: 1em;
+height: 1em;
+border: 0.15em solid var(--checkbox-fill);
+background-color: var(--checkbox-fill);
+border-radius: 0.4em;
+transform: scale(0);
+transform-origin: left;
+transition: .1s transform ease-in-out;
+}
+
+input[type="checkbox"]:checked::before {
+transform: scale(1);
+}
+
 
 /* input - select */
 select {
