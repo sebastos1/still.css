@@ -163,6 +163,16 @@ kbd {
   padding: 2px 4px 2px 4px;
 }
 
+code > *,
+summary > code,
+details > code,
+details > * > code {
+  background: var(--background-main);
+}
+code > * > * {
+  background: var(--background-block);
+}
+
 /* table */
 table {
   border-collapse: collapse;
